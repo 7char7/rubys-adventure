@@ -15123,15 +15123,15 @@ Transform:
   - {fileID: 1688326551}
   - {fileID: 1202849867}
   - {fileID: 2006341876}
-  - {fileID: 1944916205}
-  - {fileID: 1479282387}
   - {fileID: 302268930}
-  - {fileID: 207598077}
+  - {fileID: 1944916205}
   - {fileID: 1488932997}
-  - {fileID: 209970821}
+  - {fileID: 1479282387}
   - {fileID: 325782578}
+  - {fileID: 207598077}
   - {fileID: 369822714}
   - {fileID: 298765018}
+  - {fileID: 209970821}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15287,6 +15287,8 @@ GameObject:
   - component: {fileID: 2030990811}
   - component: {fileID: 2030990810}
   - component: {fileID: 2030990812}
+  - component: {fileID: 2030990814}
+  - component: {fileID: 2030990813}
   m_Layer: 0
   m_Name: Missing eye
   m_TagString: Untagged
@@ -15353,7 +15355,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030990809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.95, y: 3.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15382,6 +15384,44 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2030990813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030990809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b426d90df923440a83acea700fb333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &2030990814
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030990809}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.001183033, y: 0.052600384}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.80333334, y: 0.5133333}
+    newSize: {x: 0.80333334, y: 0.5133333}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6413965, y: 0.4790597}
+  m_EdgeRadius: 0
 --- !u!1001 &2031296108
 PrefabInstance:
   m_ObjectHideFlags: 0

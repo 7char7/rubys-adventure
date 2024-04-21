@@ -19,6 +19,11 @@ public class RubyController : MonoBehaviour
     public ParticleSystem HealthUp;
     public ParticleSystem HealthDown;
 
+    //adding a counter for how manys eyes have been picked up for final assignment
+    public static int eyeCounter = 0;
+    //adding another variable to controll if the eyes can be picked up, must talk to the robot first
+    public static int talked = 0;
+
     public int health { get { return currentHealth; }}
     int currentHealth;
     
@@ -34,7 +39,7 @@ public class RubyController : MonoBehaviour
     Vector2 lookDirection = new Vector2(1,0);
 
     AudioSource audioSource;
-    // Start is called before the first frame update
+    
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -47,7 +52,7 @@ public class RubyController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");

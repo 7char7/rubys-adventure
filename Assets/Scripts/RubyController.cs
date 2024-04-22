@@ -77,13 +77,15 @@ public class RubyController : MonoBehaviour
                 isInvincible = false;
         }
         
-        if(enemyCounter == 3 && death ==0)
+        //checks if all enemies are gone, your not dead, and you collected every eye 
+        if(enemyCounter == 3 && death == 0 && eyeCounter == 4)
         {
             death += 1;
             gameManager.gameWonUI();
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && death == 1)
+        
+        if (Input.GetKeyDown(KeyCode.R) && death == 1)
         {
   
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -105,8 +107,42 @@ public class RubyController : MonoBehaviour
                 if (character != null)
                 {
                     character.DisplayDialog();
+
                 }
             }
+
+            //raycasting for the robot spider will check how many eyes have been to correctly say the amount collected
+            RaycastHit2D hit2 = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.5f, lookDirection, 1.5f, LayerMask.GetMask("spider"));
+            if (hit2.collider != null)
+            {
+                Spidercontroller character = hit2.collider.GetComponent<Spidercontroller>();
+                if (character != null)
+                {
+                    if (eyeCounter == 0)
+                    {
+                        character.DisplayZero();
+                        //sets talked to > 0 so eyes can be picked up 
+                        talked += 1;
+}
+                    if (eyeCounter == 1)
+                    {
+                        character.DisplayOne();
+                    }
+                    if (eyeCounter == 2)
+                    {
+                        character.DisplayTwo();
+                    }
+                    if (eyeCounter == 3)
+                    {
+                        character.DisplayThree();
+                    }
+                    if (eyeCounter == 4)
+                    {
+                        character.DisplayFour();
+                    }
+                }
+            }
+
         }
     }
     

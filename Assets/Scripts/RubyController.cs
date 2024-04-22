@@ -45,6 +45,9 @@ public class RubyController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         death = 0;
+        //resets talked and eyeCounter for when restating game
+        talked = 0;
+        eyeCounter = 0;
         currentHealth = maxHealth;
         enemyCounter = 0;
         HealthUp.Stop();
